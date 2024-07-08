@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snackshop</title>
+</head>
+<body>
+    <label for="food">Please select your foods:</label>
+    <select id="toEat">
+        <option value="">Please select here</option>
+        <option value="Coffee">Coffee</option>
+        <option value="snack">Snack</option>
+        <option value="juice">Juice</option>
+        <option value="chicken">Chicken</option>
+    </select>
+    <label for="count">Quantity:</label>
+    <input type="number" id="count" name="countNumber"
+    value="0" min="1" max="10">
+    <p></p>
+    <h3></h3>
+</body>
+<script> 
+    let select=document.querySelector('select');
+    let number=doucument.querySelector('input');
+    let paragraph=doucument.querySelector('p');
+    let h3=doucument.querySelector('h3');
+    select.addEventListener('change',foods);
+
+    function foods(){ 
+        let choosen=select.value;
+        if(choosen==='coffee'){
+          paragraph.textContent="Coffee is so cool";
+          h3.textContent ='Quantity is' + number.value; 
+        }
+    }
+
+</script>
+
+
+
+
+
+
+</html>
